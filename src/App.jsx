@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
+import ProgressRing from './components/ProgressRing';
 import './App.css';
 
 function App() {
@@ -26,10 +27,22 @@ function App() {
 
   const completedCount = todos.filter(t => t.completed).length;
   const pendingCount = todos.length - completedCount;
+  const progress = todos.length > 0 ? (completedCount / todos.length) * 100 : 0;
 
   return (
     <div className="app">
-      <h1>📝 Todo List</h1>
+      <div className="app-header">
+        <h1>📝 Todo List</h1>
+        {todos.length > 0 && (
+          <ProgressRing 
+            size={60} 
+            strokeWidth={6} 
+            progress={progress}
+            completed={completedCount}
+            total={todos.length}
+          />
+        )}
+      </div>
       
       <AddTodo onAdd={addTodo} />
       
