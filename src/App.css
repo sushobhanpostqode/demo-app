@@ -211,3 +211,91 @@ h1 {
   font-size: 10px;
   color: #888;
 }
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .app-header {
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .todo-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .todo-input {
+    width: 100%;
+  }
+
+  .add-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .todo-item {
+    padding: 10px 12px;
+  }
+
+  .todo-text {
+    font-size: 14px;
+  }
+
+  .delete-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .empty-state {
+    padding: 30px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .app {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .app-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .todo-left {
+    width: 100%;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+  }
+}
