@@ -2,8 +2,6 @@
 
 A simple and elegant Todo List application built with React and Vite.
 
-![Todo App Screenshot](https://via.placeholder.com/600x400/667eea/ffffff?text=React+Todo+App)
-
 ## Features
 
 - ✅ Add new todos
